@@ -141,7 +141,7 @@ sk_product_t products [] =
   SKIM_ProductDecl_64Bit ( L"dinput8.dll",
 
                            L"ReShade64.dll",    L"ReShade",
-                           L"NieR: Automata™", LR"("FAR" (Fix Automata Res.))",
+                           L"NieR: Automataâ„¢", LR"("FAR" (Fix Automata Res.))",
 
                            L"",
 
@@ -149,7 +149,7 @@ sk_product_t products [] =
 
                            SKIM_APPID_NIER_AUTOMATA,
 
-    L"Fixes NieR: Automata™'s wonky resolution problems, Global Illumination"
+    L"Fixes NieR: Automataâ„¢'s wonky resolution problems, Global Illumination"
     L" performance, post-processing image quality, FMV stuttering, resource"
     L" load hitches, mouse cursor problems, adds > 60 FPS mode and HUD free"
     L" screenshots." ),
@@ -856,7 +856,7 @@ SKIM_Util_MoveFileNoFail ( const wchar_t* wszOld, const wchar_t* wszNew )
     GetTempFileNameW (wszPath, L"SKI", timeGetTime (), wszTemp);
 
     MoveFileExW ( wszNew, wszTemp, MOVEFILE_REPLACE_EXISTING );
-    MoveFileExW ( wszOld, wszNew,  MOVEFILE_REPLACE_EXISTING );
+    MoveFileExW ( wszOld, wszNew,  MOVEFILE_REPLACE_EXISTING | MOVEFILE_COPY_ALLOWED);
   }
 }
 
